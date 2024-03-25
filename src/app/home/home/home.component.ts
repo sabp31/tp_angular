@@ -5,20 +5,17 @@ import { InternService } from '../services/intern.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrl: './home.component.scss',
 })
 export class HomeComponent {
   /**
    * @var Array<Intern>
    * Array of Intern to be displayed
    */
-  interns: Array<Intern> = []
-  constructor(
-    private _service: InternService
-  ) {}
+  interns: Array<Intern> = [];
+  constructor(private _service: InternService) {}
 
-  ngOnInit(): void{
-    this.interns = this._service.interns
+  ngOnInit(): void {
+    this.interns = this._service.interns;
   }
 }
-  
