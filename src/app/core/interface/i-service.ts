@@ -6,6 +6,8 @@
  * - add method
  */
 
+import { Observable } from "rxjs"
+
 export interface IService <T>{  // T indique un type générique
     /**
      * 
@@ -13,4 +15,9 @@ export interface IService <T>{  // T indique un type générique
      * @returns void
      */
     add(item:T): void
+
+    /**
+     * Returns the whole list of T type
+     */
+    findAll(): Observable<Array<T>>
 }

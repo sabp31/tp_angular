@@ -16,6 +16,9 @@ export class HomeComponent {
   constructor(private _service: InternService) {}
 
   ngOnInit(): void {
-    this.interns = this._service.interns;
+    this._service.findAll()
+    .subscribe((interns: Intern[])=> {
+      this.interns = interns
+    })
   }
 }
