@@ -1,0 +1,23 @@
+
+<table>
+
+    <thead>
+        <tr> 
+            <th>Nom POE</th > 
+            <th>Durée(heures)</th > 
+        </tr>
+        
+    </thead>
+    <tbody>
+        <tr *ngFor="let poe of list_poe">
+            <td>{{ poe.name}}</td> 
+            <td>{{ poe.duration }}</td> 
+        </tr>
+    </tbody>
+
+
+</table>
+
+<a [routerLink]="['/add-poe']">
+    Gestion des poe
+</a>
