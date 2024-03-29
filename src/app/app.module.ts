@@ -8,6 +8,7 @@ import { BrowserModule } from '@angular/platform-browser'; // Pour exécuter l' 
 import { AppRoutingModule } from './app-routing.module'; //le nom de la classe du module est AppRoutingModule et il appartient au app-routing.module.tsrépertoire src/app.
 import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
+import { TpPoeModule } from './tp-poe/tp-poe.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HomeModule } from './home/home.module';
   imports: [
     BrowserModule,
     HomeModule,
-    AppRoutingModule
+    AppRoutingModule,
+    TpPoeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
