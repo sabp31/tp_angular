@@ -1,1 +1,29 @@
-<p>add-poe works!</p>
+<form [formGroup]="poeForm" (ngSubmit)="onSubmit()"> 
+    <legend> Ajouter une POE </legend>
+    <fieldset>
+        <div class="form-field">
+             <input type="text" formControlName="name" placeholder="Nom de la POE...">
+             <div *ngIf="poeForm.controls['name'].errors && poeForm.controls['name'].touched"> <!--affichage message erreur-->
+                <span *ngIf="poeForm.controls['name'].hasError('required')">
+                Le nom ne peut être vide
+                </span>
+                <span *ngIf="poeForm.controls['name'].hasError('minlenght')">
+                Le nom doit comporter plus de 3 caractères
+                </span>
+            </div>
+        </div>
+        <div class="form-field">
+            <input type="number" formControlName="duration" placeholder="Durée(heures)...">
+            <div *ngIf="poeForm.controls['duration'].hasError('required') && poeForm.controls['duration'].touched"> <!--affichage message erreur-->
+                <span *ngIf="poeForm.controls['duration'].hasError('required')">
+                La durée ne peut être vide
+                </span>
+            </div>
+        </div>
+    </fieldset>
+        <div class="form-field">
+        <button [disabled]="poeForm.invalid" type="submit"> Ajouter</button>
+    </div>
+</form>
+
+
