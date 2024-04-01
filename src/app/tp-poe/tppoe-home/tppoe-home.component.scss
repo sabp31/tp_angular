@@ -8,3 +8,10 @@ td, th /* Mettre une bordure sur les td ET les th */ {
     border: 1px solid black;
     padding: 30px;
 }
+
+button {
+    background-color: rgba(121, 14, 14, 0.2);
+    text-transform: uppercase;
+    text-align: center;
+    border: 10 px;
+  }
